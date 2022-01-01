@@ -1,5 +1,6 @@
 plugins {
     `kotlin-dsl`
+    `maven-publish`
 }
 
 group = "skytils"
@@ -25,4 +26,16 @@ gradlePlugin.plugins.create("KnockOffMixinGradle") {
     implementationClass = "skytils.gradle.plugin.knockoffmixingradle"
     displayName = "KnockOffMixinGradle"
     description = "Please send help"
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.github.Skytils"
+            artifactId = "KnockOffMixinGradle"
+            version = "LOCAL"
+
+            from(components["java"])
+        }
+    }
 }
