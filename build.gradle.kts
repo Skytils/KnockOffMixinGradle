@@ -23,7 +23,7 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
 
 gradlePlugin.plugins.create("com.github.Skytils.KnockOffMixinGradle") {
     id = "skytils.knockoffmixingradle"
-    implementationClass = "com.github.skytils.gradle.plugin.knockoffmixingradle"
+    implementationClass = "MixingradlePlugin"
     displayName = "KnockOffMixinGradle"
     description = "Please send help"
 }
