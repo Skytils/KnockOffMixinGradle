@@ -1,4 +1,4 @@
-package com.github.skytils.gradle.plugin.knockoffmixingradle
+package com.github.skytils.knockoffmixingradle.gradle.plugin
 
 import org.gradle.api.provider.Property
 

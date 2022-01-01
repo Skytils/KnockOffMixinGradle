@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "skytils"
-version = "1.0-SNAPSHOT"
+version = "LOCAL"
 
 repositories {
     mavenCentral()
@@ -22,20 +22,8 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
 }
 
 gradlePlugin.plugins.create("com.github.Skytils.KnockOffMixinGradle") {
-    id = "skytils.knockoffmixingradle"
-    implementationClass = "MixingradlePlugin"
+    id = "com.github.skytils.knockoffmixingradle"
+    implementationClass = "com.github.skytils.knockoffmixingradle.gradle.plugin.KnockoffMixinGradlePlugin"
     displayName = "KnockOffMixinGradle"
     description = "Please send help"
-}
-
-publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "com.github.Skytils"
-            artifactId = "gradle.plugin.KnockOffMixinGradle"
-            version = "LOCAL"
-
-            from(components["java"])
-        }
-    }
 }
