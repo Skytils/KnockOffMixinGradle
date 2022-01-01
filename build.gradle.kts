@@ -21,9 +21,9 @@ tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach 
     kotlinOptions.jvmTarget = "1.8"
 }
 
-gradlePlugin.plugins.create("KnockOffMixinGradle") {
+gradlePlugin.plugins.create("com.github.Skytils.KnockOffMixinGradle") {
     id = "skytils.knockoffmixingradle"
-    implementationClass = "skytils.gradle.plugin.knockoffmixingradle"
+    implementationClass = "com.github.skytils.gradle.plugin.knockoffmixingradle"
     displayName = "KnockOffMixinGradle"
     description = "Please send help"
 }
@@ -32,7 +32,7 @@ publishing {
     publications {
         create<MavenPublication>("maven") {
             groupId = "com.github.Skytils"
-            artifactId = "KnockOffMixinGradle"
+            artifactId = "gradle.plugin.KnockOffMixinGradle"
             version = "LOCAL"
 
             from(components["java"])

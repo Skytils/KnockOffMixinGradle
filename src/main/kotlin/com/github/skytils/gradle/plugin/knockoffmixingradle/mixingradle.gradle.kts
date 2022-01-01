@@ -1,4 +1,4 @@
-import skytils.gradle.plugin.knockoffmixingradle.KnockoffMixinGradleExtension
+import com.github.skytils.gradle.plugin.knockoffmixingradle.KnockoffMixinGradleExtension
 
 
 val extension = project.extensions.create<KnockoffMixinGradleExtension>("mixin")
