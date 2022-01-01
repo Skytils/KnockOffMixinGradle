@@ -14,7 +14,7 @@ with(extension) {
         compileOnly("org.spongepowered:mixin:0.8.5")
     }
     val mixinSrg = File(project.buildDir, "tmp/mixins/mixins.srg")
-    val mixinRefMap = File(project.buildDir, "tmp/mixins/${refmapName.get()}")
+    val mixinRefMap = File(project.buildDir, "tmp/mixins/${refmapName}")
     project.extra.set("mixinSrg", mixinSrg)
     project.extra.set("mixinRefMap", mixinRefMap)
 
